@@ -78,7 +78,7 @@ const Footer = () => {
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap>
-          <SocialLogo to="/">
+          <SocialLogo to="/React_website">
             <SocialIcon />
             eFIMa
           </SocialLogo>
