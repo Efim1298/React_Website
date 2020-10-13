@@ -15,12 +15,17 @@ import {
   NavBtnLink,
 } from "./Navbar.elements";
 
+
+
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  
+  
 
   const showButton = () => {
     if (window.innrWidth <= 960) {
@@ -29,6 +34,7 @@ const Navbar = () => {
       setButton(false);
     }
   };
+
 
   useEffect(() => {
     showButton();
@@ -48,8 +54,8 @@ const Navbar = () => {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
-            <NavMenu onClick={handleClick} click={click}>
-              <NavItem >
+              <NavMenu onClick={handleClick} click={click}>
+              <NavItem>
                 <NavLinks to="/React_website">Home</NavLinks>
               </NavItem>
               <NavItem>
@@ -58,15 +64,16 @@ const Navbar = () => {
               <NavItem >
                 <NavLinks to="/products">Products</NavLinks>
               </NavItem>
+
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to="/sign-up">
-                    <Button primary>SIGN UP</Button>
+                  <NavBtnLink to="/log-in">
+                    <Button primary>LOG IN</Button>
                   </NavBtnLink>
                 ) : (
-                  <NavBtnLink to="/sign-up">
+                  <NavBtnLink to="/log-in">
                     <Button fontBig primary>
-                      SIGN UP
+                      LOG IN
                     </Button>
                   </NavBtnLink>
                 )}

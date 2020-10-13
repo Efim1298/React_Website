@@ -1,36 +1,37 @@
 import React, { useState } from "react";
-import "./Form";
-import FormSignup from "./FormSignup";
-import FormSuccess from "./FormSuccess";
+import FormLogin from "./FormLogin";
+import FormSuccess2 from "./FormSuccess2";
+import "./Form2.css";
 
-const Form = () => {
+const Form2 = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   function submitForm() {
     setIsSubmitted(true);
   }
+
   return (
     <>
-      <div className="form-container">
+      <div className="form-container2">
         <a className="close-btn" href="/React_website">
           ×
         </a>
         <div className="form-content-left">
           <img
-            className="form-img"
-            src={require("../../images/img-2.svg")}
+            className="form-img2"
+            src={require("../../images/img-4.svg")}
             aria-hidden
             alt="spaceship"
           />
         </div>
         {!isSubmitted ? (
-          <FormSignup submitForm={submitForm} />
+          <FormLogin submitForm={submitForm} />
         ) : (
-          <FormSuccess />
+          <FormSuccess2 />
         )}
       </div>
     </>
   );
 };
 
-export default Form;
+export default Form2;
